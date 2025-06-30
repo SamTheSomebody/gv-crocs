@@ -1,0 +1,25 @@
+{
+  "name": "gv-crocs-website",
+  "version": "1.0.0",
+  "description": "A minimal website for GV Crocs using Tailwind CSS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "website",
+    "tailwind",
+    "minimal",
+    "crocs"
+  ],
+  "author": "GV Crocs",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.13.0",
+    "chokidar": "^3.5.3"
+  }
+}

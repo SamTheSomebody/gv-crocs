@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GV Crocs</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              light: "#8ECAE6",
+              mid: "#219EBC",
+              dark: "#023047",
+              accent: "#FFB703",
+              darkAccent: "#FB8500",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+html {
+  scroll-padding-top: 5rem;
+}
+@keyframes header {
+    0% {transform: translateX(-10px)}
+    100% {transform: translateX(10px)}
+  }
+.header { 
+    animation: header 10s ease-in-out 0s infinite alternate; 
+}
+    </style>
+  </head>
+
+  
+
+  <body class="bg-light/20 min-h-screen w-screen">
+    <nav class="sticky bg-gradient-to-b from-light to-mid shadow-lg top-0 z-50">
+      <div class="flex justify-between items-center px-4">
+          <div class="text-2xl font-bold text-white"><img src="images/logo.png" alt="GV Crocs Logo" class="h-10"></div>
+          <div class="flex text-white font-bold pt-1">
+            <a
+              href="#about"
+              class="p-4 transition-all h-full hover:text-accent border-b-2 border-transparent hover:border-accent"
+              >About</a
+            >
+            <a
+              href="#membership"
+              class="p-4 transition-all h-full hover:text-accent border-b-2 border-transparent hover:border-accent"
+              >Membership</a
+            >
+            <a
+              href="#coaching"
+              class="p-4 transition-all h-full hover:text-accent border-b-2 border-transparent hover:border-accent"
+              >Coaching</a
+            >
+            <a
+              href="#schedule"
+              class="p-4 transition-all h-full hover:text-accent border-b-2 border-transparent hover:border-accent"
+              >Schedule</a
+            >
+            <a
+              href="#contact"
+              class="p-4 transition-all h-full hover:text-accent border-b-2 border-transparent hover:border-accent"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+  <div class="flex flex-col space-y-20 items-center w-full">
+    <section id="home" class="relative bg-[url('images/pool_crop.png')] bg-cover bg-bottom text-white h-72 w-full w-max-1xl overflow-hidden shadow-2xl">
+      <div class="absolute inset-0 z-40">
+        <img src="images/pool_crop_foreground.png" alt="Overlay" class="w-full h-full object-bottom object-cover shadow-lg" />
+      </div>
+      <div class="relative z-10 flex flex-col h-full justify-end -space-y-20 font-bold text-shadow-lg">
+        <h1 class="text-4xl text-left pl-24 header delay-2000">Home of the</h1>
+        <h1 class="text-[200px] text-center header">GV CROCS</h1>
+      </div>
+    </section>
+
+    <section id="about" class="flex w-2/3 text-black items-stretch shadow-lg rounded-lg bg-white overflow-hidden z-20 hover:rotate-[1deg] hover:scale-105 transition-all duration-300 group">
+      <div class="flex-1 flex flex-col">
+        <div class="flex-1 relative">
+          <div class="absolute inset-0 bg-light translate-x-full group-hover:translate-x-0 transition-all duration-300 -z-10"></div>
+          <h2 class="p-8 text-2xl font-bold border-b-2 border-light text-light text-right group-hover:text-white transition-all z-20 duration-300">OUR MISSION</h2>
+        </div>
+        <p class="flex-1 p-8 text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="flex-1 relative min-h-[250px]">
+        <img src="images/flippers_goggles.jpg" alt="Flippers and goggles" class="absolute inset-0 w-full h-full object-cover shadow-lg" />
+      </div>
+    </section>
+    
+    <section id="membership" class="flex w-2/3 text-black items-stretch shadow-lg rounded-lg bg-white overflow-hidden z-20 hover:rotate-[-1deg] hover:scale-105 transition-all duration-300 group">
+      <div class="flex-1 relative min-h-[250px]">
+        <img src="images/lanes.jpg" alt="Lanes" class="absolute inset-0 w-full h-full object-cover shadow-lg" />
+      </div>
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <div class="flex-1 relative">
+          <div class="absolute inset-0 bg-light -translate-x-full group-hover:translate-x-0 transition-all duration-300 -z-10"></div>
+          <h2 class="p-8 text-2xl font-bold border-b-2 border-light text-light mx-auto group-hover:text-white transition-all z-20 duration-300">MEMBERSHIP</h2>
+        </div>
+        <p class="flex-1 pt-4 p-8 text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
+
+    <section id="coaching" class="flex w-2/3 text-black items-stretch shadow-lg rounded-lg bg-white overflow-hidden z-20 hover:rotate-[1deg] hover:scale-105 transition-all duration-300 group">
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <div class="flex-1 relative">
+          <div class="absolute inset-0 bg-light translate-x-full group-hover:translate-x-0 transition-all duration-300 -z-10"></div>
+          <h2 class="p-8 text-2xl font-bold border-b-2 border-light text-light mx-auto group-hover:text-white transition-all z-20 duration-300">COACHING</h2>
+        </div>
+        <p class="flex-1 pt-4 p-8 text-justify">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="flex-1 relative min-h-[250px]">
+        <img src="images/close_up.jpg" alt="Coaching" class="absolute inset-0 w-full h-full object-cover shadow-lg" />
+      </div>
+    </section>
+
+    <section id="schedule" class="flex w-2/3 text-black shadow-lg rounded-lg bg-white overflow-hidden z-20 group">
+      <div class="flex-1 flex overflow-hidden">
+        <div class="flex-1 relative items-center">
+          <div class="absolute inset-0 bg-light translate-x-full group-hover:translate-x-0 transition-all duration-300 -z-10"></div>
+          <h2 class="text-4xl font-bold text-light group-hover:text-white transition-all z-20 duration-300 rotate-90">SCHEDULE</h2>
+        </div>
+      </div>
+      <div class="flex-1 p-8 bg-[#f0f3f8] shadow-lg">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&mode=WEEK&showCalendars=0&showPrint=0&showTitle=0&src=NDc5MzNiNzFmMWFjMzk1OTc3YTljOGM3MDE3ODlkYTkwMWNhYjM4MzFkMGRmYjA5ZDlhNmNhNDAzOWE2Nzc3M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238e24aa" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </section>
+
+    <section id="contact" class="text-black p-8 text-left bg-gray-50">
+      <div class="flex space-x-12">
+          <div class="flex-0 flex flex-col space-y-4">
+          <h2 class="text-2xl font-bold">Contact Us</h2>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <p> +61 (0) 123 456 789</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <p>info@gvcrocs.com.au</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <p>Goulburn Valley, VIC</p>
+            </div>
+        </div>
+        <form class="space-y-6 text-left flex-1">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                placeholder="Your full name"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                placeholder="your.email@example.com"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              placeholder="What is this regarding?"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent resize-vertical"
+              placeholder="Tell us more about your inquiry..."
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button 
+              type="submit" 
+              class="bg-accent text-white px-8 py-3 rounded-md font-semibold hover:bg-lightAccent transition-colors duration-200 shadow-md hover:shadow-lg"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+        
+
+        </div>
+      </div>
+    </section>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
