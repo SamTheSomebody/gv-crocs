@@ -3,20 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width" />
   <title>GV Crocs</title>
   <link rel="icon" type="image/png" href="images/logo.png">
   <link href="./dist/output.css" rel="stylesheet">
   <style>
     html {
-      scroll-padding-top: 5rem;
+      scroll-padding-top: 2.65rem;
     }
 
     @keyframes header {
       0% {
         transform: translateX(-49%) translateY(-70%)
       }
-
       100% {
         transform: translateX(-51%) translateY(-70%)
       }
@@ -28,17 +27,17 @@
   </style>
 </head>
 
-<body class="bg-mid/20 min-h-screen w-screen">
+<body id="top" class="bg-mid/20 min-h-screen w-full overflow-x-hidden">
   <!--Header-->
   <nav class="sticky bg-mid shadow-lg top-0 z-50">
-    <div class="flex justify-between items-center px-4">
-      <div class="text-2xl font-bold text-white">
-        <img src="images/logo.png" alt="GV Crocs Logo" class="h-10">
-      </div>
-      <div class="flex text-white font-bold pt-1">
+    <div class="flex justify-between items-center">
+      <a href="#top" class="flex-1 h-10">
+        <img src="images/logo.png" alt="GV Crocs Logo" class="h-10 p-2">
+      </a>
+      <div class="flex text-white font-bold pt-1 h-full text-xs md:text-sm">
         <a href="#about" class="nav-link">About</a>
         <a href="#schedule" class="nav-link">Schedule</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#contact" class="nav-link pr-4">Contact</a>
       </div>
     </div>
     </div>
@@ -47,27 +46,27 @@
   <!--Home-->
   <div class="flex flex-col items-center w-full">
     <section id="home"
-      class="relative bg-[url('../images/pool_crop.png')] bg-cover bg-[50%_75%] text-white h-72 w-full overflow-hidden shadow-lg">
+      class="relative bg-[url('../images/pool_crop.png')] bg-cover bg-[50%_75%] text-white h-24 md:h-64 lg:h-72 w-full overflow-hidden shadow-lg">
       <div class="absolute inset-0 z-40 flex flex-col justify-end">
         <img src="images/pool_crop_foreground.png" alt="Overlay" class="w-full h-full object-[50%_75%] object-cover"
           style="box-shadow: 0px 10px 10px #000000;" />
+        <h1
+          class="font-bold -z-20 absolute left-[50%] top-[75%] -translate-x-1/2 -translate-y-[350%] text-[3vw] text-center text-nowrap"
+          style="text-shadow: 0px 5px 5px #00000088;">Welcome to the</h1>
         <h1 class="font-bold -z-10 absolute left-[50%] top-[75%]  text-[15vw] text-center text-nowrap header"
           style="text-shadow: 0px 10px 5px #00000088;">GV CROCS</h1>
-        <h1
-          class="font-bold -z-10 absolute left-[50%] top-[75%] -translate-x-1/2 -translate-y-[300%] text-[3vw] text-center text-nowrap"
-          style="text-shadow: 0px 10px 5px #00000088;">Welcome to the</h1>
       </div>
     </section>
 
-    <div class="flex-1 flex flex-col py-10 space-y-10 lg:space-y-20 items-center w-full">
-      <!--About-->
-      <section id="about" class="card card-hover-a group">
+    <div id="about" class="flex-1 flex flex-col py-4 lg:py-10 space-y-4 lg:space-y-20 items-center w-full">
+      <!--Mission-->
+      <section id="mission" class="card card-hover-a group">
         <div class="flex-1 flex flex-col">
           <div class="flex-1 relative">
             <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title text-right">OUR MISSION</h2>
+            <h2 class="card-title-a">OUR MISSION</h2>
           </div>
-          <p class="flex-1 p-8 text-justify">
+          <p class="card-body">
             GV Crocs is dedicated to creating a fun and safe environment where adult swimmers in our community can
             regularly train for fitness, wellbeing, and competition. Our vision is to lead the way in promoting,
             developing, and growing fitness and overall health through swimming in the Goulburn Valley region.
@@ -90,9 +89,9 @@
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
-            <h2 class="card-title">MEMBERSHIP</h2>
+            <h2 class="card-title-b">MEMBERSHIP</h2>
           </div>
-          <p class="flex-1 pt-4 p-8 text-justify">
+          <p class="card-body">
             You're welcome to try a few sessions with the squad before joining Masters Swimming Victoria. After these
             initial sessions, MSV membership is required to continue training with the Crocs. Most members choose the
             12-Month Regional Discount Membership, which costs $100 per year. This membership includes event insurance
@@ -108,9 +107,9 @@
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
-            <h2 class="card-title">TRAINING SESSION COSTS</h2>
+            <h2 class="card-title-b">TRAINING SESSION COST</h2>
           </div>
-          <p class="flex-1 pt-4 p-8 text-justify">
+          <p class="card-body">
             Each training session costs $7, which covers coaching, administration, and a small contribution to club
             activities that benefit everyone. You can pay poolside using a touch-pay Square pad for credit/debit cards
             or via your phone.
@@ -131,7 +130,7 @@
         <div class="card-panel">
           <div class="flex-1 relative">
             <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title text-right">COACHING</h2>
+            <h2 class="card-title-b">COACHING</h2>
           </div>
           <p class="card-body">
             Our Head Coach, Nicole Dainton (Advanced Coach), brings a wealth of experience in both pool and open-water
@@ -154,7 +153,7 @@
         <div class="card-panel">
           <div class="flex-1 relative">
             <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title text-right">LANE STRUCTURE</h2>
+            <h2 class="card-title-a">LANE STRUCTURE</h2>
           </div>
           <p class="card-body">
             We use three lanes for indoor sessions and four lanes when swimming outdoors. Lane 1 is for beginners or
@@ -176,11 +175,11 @@
         <div class="card-panel">
           <div class="flex-1 relative">
             <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title text-right">EQUIPMENT</h2>
+            <h2 class="card-title-b">EQUIPMENT</h2>
           </div>
           <p class="card-body">
             We use the following equipment in most training sessions. Please bring what you can. You can purchase these
-            items from www.aquashop.com.au, with delivery typically taking 2–3 days. If you're unsure what to buy,
+              items from <a href="www.aquashop.com.au" class="text-blue-500 hover:underline">www.aquashop.com.au</a>, with delivery typically taking 2–3 days. If you're unsure what to buy,
             please contact Nicole.
             <br>
             - Drink bottle
@@ -213,9 +212,9 @@
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
-            <h2 class="card-title">SOCIAL</h2>
+            <h2 class="card-title-b">SOCIAL</h2>
           </div>
-          <p class="flex-1 pt-4 p-8 text-justify">
+          <p class="card-body">
             Every Saturday morning after training (around 9am), we meet for breakfast at Welsford Street Café, 2/159
             Welsford Street, Shepparton. Come along for a chat and a delicious breakfast—everyone is welcome!
             <br><br>
@@ -233,18 +232,19 @@
 
     <!--Schedule-->
     <section id="schedule"
-      class="flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-8 space-y-8 pb-16">
-      <h2 class="card-title text-center p-0 border-0">SCHEDULE</h2>
-      <div class="bg-[#f0f3f8] p-8 rounded-lg shadow-lg origin-top scale-50 md:scale-75 lg:scale-100">
+      class="flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-4 space-y-4 md:space-y-8 md:pb-16">
+      <h2 class="card-title-a text-center p-0 border-0">SCHEDULE</h2>
+      <div class="relative w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
         <iframe
+          class="absolute top-0 left-0 w-full h-full p-4"
           src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&mode=WEEK&showCalendars=0&showPrint=0&showTitle=0&src=NDc5MzNiNzFmMWFjMzk1OTc3YTljOGM3MDE3ODlkYTkwMWNhYjM4MzFkMGRmYjA5ZDlhNmNhNDAzOWE2Nzc3M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238e24aa"
-          style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          style="border-width:0" frameborder="0" scrolling="no"></iframe>
       </div>
     </section>
 
     <!--Contact-->
     <section id="contact" class="text-black p-8 flex flex-col items-center space-y-4 w-full">
-      <h2 class="card-title p-0 border-0">CONTACT US</h2>
+      <h2 class="card-title-a text-center p-0 border-0">CONTACT US</h2>
       <div
         class="flex-1 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 justify-around items-center w-full max-w-2xl">
         <div class="icon-container">
@@ -308,9 +308,9 @@
       </form>
     </section>
   </div>
-  <footer class="pt-20">
-    <div class="flex justify-end space-x-8 p-4 text-white">
-      <p>Designed with ♥ by Sam Muller</p>
+  <footer class="lg:pt-20">
+    <div class="flex flex-col md:flex-row items-center justify-between md:space-x-8 p-8 text-white">
+      <p><a href="https://github.com/SamTheSomebody">Designed with ♥ by Sam Muller</a></p>
       <p>Copyright © 2025 GV Crocs</p>
     </div>
   </footer>
