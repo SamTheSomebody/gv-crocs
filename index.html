@@ -45,11 +45,12 @@
 </head>
 
 <body id="top" class="bg-mid/20 min-h-screen w-full overflow-x-hidden">
-  <!--Header-->
-  <nav class="sticky bg-mid shadow-lg top-0 z-50 flex justify-center">
-    <div class="flex-1 flex justify-between items-center max-w-4xl">
-      <a href="#top" class="flex-1 h-10">
-        <img src="images/logo.png" alt="GV Crocs Logo" class="h-10 p-2">
+
+  <!--Nav Bar-->
+  <nav class="sticky bg-mid shadow-lg top-0 z-40 flex justify-center">
+    <div class="flex-1 flex justify-between items-center max-w-7xl">
+      <a href="#top" class="flex-1 h-10 md:h-12">
+        <img src="images/logo.png" alt="GV Crocs Logo" class="h-10 p-2 md:h-12">
       </a>
       <div class="flex text-white font-bold pt-1 h-full text-xs md:text-sm">
         <a href="#schedule" class="nav-link">Schedule</a>
@@ -62,18 +63,22 @@
 
   <div class="flex flex-col items-center w-full mb-15">
 
-    <!--Home-->
-    <section id="home" class="relative bg-white w-full flex h-[24vw]">
-      <img src="images/pool_crop.png" alt="Pool" class="absolute inset-0 w-full h-auto object-cover overflow-visible">
-      <img src="images/pool_crop_foreground.png" alt="Overlay"
-        class="absolute inset-0 w-full h-auto object-cover overflow-visible blur-sm brightness-25 z-10">
-      <img src="images/pool_crop_foreground.png" alt="Overlay"
-        class="absolute inset-0 w-full h-auto object-cover overflow-visible z-20">
+    <!--Header-->
+    <section id="header" class="relative bg-white w-full flex h-[24vw] max-h-[350px] justify-center items-center">
       <div
-        class="absolute inset-0 w-full h-auto font-bold leading-none text-white text-center text-nowrap -space-y-[2vw] p-[2vw] pb-[8vw] flex flex-col">
-        <h1 class="flex-1 text-[3vw] header2" style="text-shadow: 0px 5px 5px #00000088;">
+        class="absolute inset-0 w-full h-full z-0 bg-[url('../images/pool_crop.png')] bg-repeat bg-center blur-xl overflow-hidden">
+      </div>
+      <img src="images/pool_crop.png" alt="Pool"
+        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain overflow-visible">
+      <img src=" images/pool_crop_foreground.png" alt="Overlay"
+        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain overflow-visible blur-sm brightness-25 z-10">
+      <img src="images/pool_crop_foreground.png" alt="Overlay"
+        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain overflow-visible z-20">
+      <div class="absolute inset-0 w-full h-auto font-bold leading-none text-white text-center text-nowrap justify-center
+        -space-y-[2vw] p-[2vw] pb-[8vw] 2xl:-space-y-8 2xl:p-4 2xl:pb-24 flex flex-col">
+        <h1 class="flex-1 text-[3vw] 2xl:text-[46px] header2" style="text-shadow: 0px 5px 5px #00000088;">
           Welcome to the</h1>
-        <h1 class="flex-1 text-[15vw] header" style="text-shadow: 0px 10px 5px #00000088;">
+        <h1 class="flex-1 text-[15vw] 2xl:text-[230px] header" style="text-shadow: 0px 10px 5px #00000088;">
           GV CROCS
         </h1>
       </div>
@@ -81,8 +86,8 @@
 
     <!--Schedule-->
     <section id="schedule"
-      class="pt-[4vw] flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-4 space-y-4 md:space-y-8 md:pb-16">
-      <div class="relative max-w-4xl w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
+      class="pt-[4vw] 2xl:pt-16 flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-4 space-y-4 md:space-y-8 md:pb-16">
+      <div class="relative max-w-7xl w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
         <iframe class="absolute top-0 left-0 w-full h-full p-4"
           src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&showPrint=0&mode=AGENDA&title=GV%20Crocs&showTitle=0&src=aGVsbG8uZ3Zjcm9jc0BnbWFpbC5jb20&src=OGc4MHBtdjRnOW5xNDNtYnNkbmJlZ2JkNWFlbWliNGhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=c3ZwZHRwM2RlYThhNGFmY21xYjZodjMycXVtOG0yNDhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MGFydjlzdGI0bnZyOTZ0bjhxdGw1aGxtbnVuZXFsbXFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=aXBxZnJhOGVwZTNmdGtzaTlqOWdpaHB1ajJhNWZ1bmtAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%23f4511e&color=%23d81b60&color=%23d50000&color=%238e24aa"
           style="border-width:0" frameborder="0" scrolling="no"></iframe>
