@@ -6,6 +6,10 @@
   .body {
     @apply text-sm md:text-base
   }
+
+  .button {
+    @apply bg-mid text-white px-8 py-3 rounded-md border-mid font-semibold hover:bg-white hover:text-mid hover:border-2 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
 }
 @layer components {
   .nav-link {
@@ -13,7 +17,7 @@
   }
 
   .card {
-    @apply flex flex-col lg:flex-row lg:w-2/3 mx-4 max-w-4xl text-black items-stretch shadow-lg rounded-lg bg-white transition-all duration-300 overflow-hidden z-20;
+    @apply flex flex-col md:flex-row mx-4 max-w-4xl text-black items-stretch shadow-lg rounded-lg bg-white transition-all duration-300 overflow-hidden z-20;
   }
 
   .card-hover-a {
@@ -21,7 +25,7 @@
   }
 
   .card-hover-b {
-    @apply hover:shadow-2xl lg:hover:scale-105 hover:translate-x-0 lg:-translate-x-10 lg:hover:rotate-[1deg];
+    @apply md:flex-row-reverse hover:shadow-2xl lg:hover:scale-105 hover:translate-x-0 lg:-translate-x-10 lg:hover:rotate-[1deg];
   }
 
   .card-title-box {
@@ -45,7 +49,7 @@
   }
 
   .card-image-container {
-    @apply flex-1 relative min-h-[250px] z-10;
+    @apply flex-1 md:flex-[1.5] relative min-h-[250px] sm:min-h-[350px] z-10;
   }
 
   .card-image {
@@ -56,15 +60,15 @@
     @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mid focus:border-transparent;
   }
 
-  .button {
-    @apply bg-mid text-white px-8 py-3 rounded-md font-semibold hover:bg-dark hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg;
-  }
-
   .icon-container {
-    @apply flex-1 flex flex-nowrap items-center space-x-3 overflow-hidden;
+    @apply flex-1 flex items-start md:items-center space-x-3;
   }
 
   .icon-bg {
-    @apply flex w-12 h-12 bg-mid rounded-full justify-center items-center;
+    @apply flex min-w-12 min-h-12 bg-mid rounded-full justify-center items-center;
+  }
+
+  .checkbox-container {
+    @apply flex items-center space-x-2;
   }
 }

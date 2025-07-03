@@ -14,51 +14,81 @@
 
     @keyframes header {
       0% {
-        transform: translateX(-49%) translateY(-70%)
+        transform: translateX(-10px)
       }
+
       100% {
-        transform: translateX(-51%) translateY(-70%)
+        transform: translateX(10px)
       }
     }
 
+    @keyframes header2 {
+      0% {
+        transform: translateX(-15px)
+      }
+
+      100% {
+        transform: translateX(15px)
+      }
+    }
+
+
+
     .header {
       animation: header 10s ease-in-out 0s infinite alternate;
+    }
+
+    .header2 {
+      animation: header2 8s ease-in-out infinite alternate;
     }
   </style>
 </head>
 
 <body id="top" class="bg-mid/20 min-h-screen w-full overflow-x-hidden">
   <!--Header-->
-  <nav class="sticky bg-mid shadow-lg top-0 z-50">
-    <div class="flex justify-between items-center">
+  <nav class="sticky bg-mid shadow-lg top-0 z-50 flex justify-center">
+    <div class="flex-1 flex justify-between items-center max-w-4xl">
       <a href="#top" class="flex-1 h-10">
         <img src="images/logo.png" alt="GV Crocs Logo" class="h-10 p-2">
       </a>
       <div class="flex text-white font-bold pt-1 h-full text-xs md:text-sm">
-        <a href="#about" class="nav-link">About</a>
         <a href="#schedule" class="nav-link">Schedule</a>
+        <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link pr-4">Contact</a>
       </div>
     </div>
     </div>
   </nav>
 
-  <!--Home-->
-  <div class="flex flex-col items-center w-full">
-    <section id="home"
-      class="relative bg-[url('../images/pool_crop.png')] bg-cover bg-[50%_75%] text-white h-24 md:h-64 lg:h-72 w-full overflow-hidden shadow-lg">
-      <div class="absolute inset-0 z-40 flex flex-col justify-end">
-        <img src="images/pool_crop_foreground.png" alt="Overlay" class="w-full h-full object-[50%_75%] object-cover"
-          style="box-shadow: 0px 10px 10px #000000;" />
-        <h1
-          class="font-bold -z-20 absolute left-[50%] top-[75%] -translate-x-1/2 -translate-y-[350%] text-[3vw] text-center text-nowrap"
-          style="text-shadow: 0px 5px 5px #00000088;">Welcome to the</h1>
-        <h1 class="font-bold -z-10 absolute left-[50%] top-[75%]  text-[15vw] text-center text-nowrap header"
-          style="text-shadow: 0px 10px 5px #00000088;">GV CROCS</h1>
+  <div class="flex flex-col items-center w-full mb-15">
+
+    <!--Home-->
+    <section id="home" class="relative bg-white w-full flex h-[24vw]">
+      <img src="images/pool_crop.png" alt="Pool" class="absolute inset-0 w-full h-auto object-cover overflow-visible">
+      <img src="images/pool_crop_foreground.png" alt="Overlay"
+        class="absolute inset-0 w-full h-auto object-cover overflow-visible blur-sm brightness-25 z-10">
+      <img src="images/pool_crop_foreground.png" alt="Overlay"
+        class="absolute inset-0 w-full h-auto object-cover overflow-visible z-20">
+      <div
+        class="absolute inset-0 w-full h-auto font-bold leading-none text-white text-center text-nowrap -space-y-[2vw] p-[2vw] pb-[8vw] flex flex-col">
+        <h1 class="flex-1 text-[3vw] header2" style="text-shadow: 0px 5px 5px #00000088;">
+          Welcome to the</h1>
+        <h1 class="flex-1 text-[15vw] header" style="text-shadow: 0px 10px 5px #00000088;">
+          GV CROCS
+        </h1>
       </div>
     </section>
 
-    <div id="about" class="flex-1 flex flex-col py-4 lg:py-10 space-y-4 lg:space-y-20 items-center w-full">
+    <!--Schedule-->
+    <section id="schedule"
+      class="pt-12 flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-4 space-y-4 md:space-y-8 md:pb-16">
+      <div class="relative max-w-4xl w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
+        <iframe class="absolute top-0 left-0 w-full h-full p-4"
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&showPrint=0&mode=AGENDA&title=GV%20Crocs&showTitle=0&src=aGVsbG8uZ3Zjcm9jc0BnbWFpbC5jb20&src=OGc4MHBtdjRnOW5xNDNtYnNkbmJlZ2JkNWFlbWliNGhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=c3ZwZHRwM2RlYThhNGFmY21xYjZodjMycXVtOG0yNDhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MGFydjlzdGI0bnZyOTZ0bjhxdGw1aGxtbnVuZXFsbXFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=aXBxZnJhOGVwZTNmdGtzaTlqOWdpaHB1ajJhNWZ1bmtAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%23f4511e&color=%23d81b60&color=%23d50000&color=%238e24aa"
+          style="border-width:0" frameborder="0" scrolling="no"></iframe>
+    </section>
+
+    <div id="about" class="flex-1 flex flex-col py-4 md:py-10 space-y-4 md:space-y-10 items-center w-full">
       <!--Mission-->
       <section id="mission" class="card card-hover-a group">
         <div class="flex-1 flex flex-col">
@@ -77,15 +107,12 @@
           </p>
         </div>
         <div class="card-image-container">
-          <img src="images/flippers_goggles.jpg" alt="Flippers and goggles" class="card-image" />
+          <img src="images/mission.jpg" alt="Flippers and goggles" class="card-image" />
         </div>
       </section>
 
       <!--Membership-->
       <section id="membership" class="card card-hover-b group">
-        <div class="card-image-container">
-          <img src="images/butterfly.jpg" alt="Lanes" class="card-image" />
-        </div>
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
@@ -99,11 +126,36 @@
             newsletter to keep you updated with MSV news and information.
           </p>
         </div>
+        <div class="card-image-container">
+          <img src="images/membership.jpg" alt="Lanes" class="card-image" />
+        </div>
+      </section>
+
+      <!--Coaching-->
+      <section id="coaching" class="card card-hover-a group">
+        <div class="card-panel">
+          <div class="flex-1 relative">
+            <div class="card-title-box translate-x-full "></div>
+            <h2 class="card-title-a">COACHING</h2>
+          </div>
+          <p class="card-body">
+            Our Head Coach, Nicole Dainton (Advanced Coach), brings a wealth of experience in both pool and open-water
+            swimming. We also have strong connections with the coaches at Shepparton Swimming Club. You can expect to
+            improve your stroke technique, fitness, and competition preparation. We encourage you to discuss your
+            swimming goals with our coaches.
+            <br>
+            <br>
+            New members should contact Nicole before their first training session so she can be prepared and aware of
+            your start date.
+          </p>
+        </div>
+        <div class="card-image-container">
+          <img src="images/coaching.jpg" alt="Coaching" class="card-image" />
+        </div>
       </section>
 
       <!--Training Costs-->
-      <section id="training" class="card card-hover-a group">
-
+      <section id="training" class="card card-hover-b group">
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
@@ -116,103 +168,21 @@
             <br><br>
             You also have the option to pay for a block of 6 or 12 swim sessions in advance.
             <br><br>
-            Please note: Standard pool entry is required through Aquamoves reception, either with a casual swim fee or
-            your membership.
+            <span class="font-bold">Please note:</span> Standard pool entry is required through Aquamoves reception,
+            either with a casual swim fee or your Aquamoves membership.
           </p>
         </div>
         <div class="card-image-container">
-          <img src="images/lanes.jpg" alt="Lanes" class="card-image" />
-        </div>
-      </section>
-
-      <!--Coaching-->
-      <section id="coaching" class="card card-hover-b group">
-        <div class="card-panel">
-          <div class="flex-1 relative">
-            <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title-b">COACHING</h2>
-          </div>
-          <p class="card-body">
-            Our Head Coach, Nicole Dainton (Advanced Coach), brings a wealth of experience in both pool and open-water
-            swimming. We also have strong connections with the coaches at Shepparton Swimming Club. You can expect to
-            improve your stroke technique, fitness, and competition preparation. We encourage you to discuss your
-            swimming goals with our coaches.
-            <br>
-            <br>
-            New members should contact Nicole before their first training session so she can be prepared and aware of
-            your start date. (Mobile and email details to be provided.)
-          </p>
-        </div>
-        <div class="card-image-container">
-          <img src="images/close_up.jpg" alt="Coaching" class="card-image" />
-        </div>
-      </section>
-
-      <!--Lane Structure-->
-      <section id="lanes" class="card card-hover-a group">
-        <div class="card-panel">
-          <div class="flex-1 relative">
-            <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title-a">LANE STRUCTURE</h2>
-          </div>
-          <p class="card-body">
-            We use three lanes for indoor sessions and four lanes when swimming outdoors. Lane 1 is for beginners or
-            those returning after a break, as well as swimmers who prefer a slower pace. Lane 2 is for average to
-            above-average swimmers who have been with the club for a while or have the fitness to complete the full
-            program. Lanes 3 and 4 are for above-average swimmers with a high level of fitness.
-            <br> <br>
-            You're welcome to try a session for free. Remember, your enjoyment will grow as you get to know other
-            members and build your fitness base. Please be patient with your progress.
-          </p>
-        </div>
-        <div class="card-image-container">
-          <img src="images/lanes.jpg" alt="Coaching" class="card-image" />
-        </div>
-      </section>
-
-      <!--Equipment-->
-      <section id="equipment" class="card card-hover-b group">
-        <div class="card-panel">
-          <div class="flex-1 relative">
-            <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title-b">EQUIPMENT</h2>
-          </div>
-          <p class="card-body">
-            We use the following equipment in most training sessions. Please bring what you can. You can purchase these
-              items from <a href="www.aquashop.com.au" class="text-blue-500 hover:underline">www.aquashop.com.au</a>, with delivery typically taking 2–3 days. If you're unsure what to buy,
-            please contact Nicole.
-            <br>
-            - Drink bottle
-            <br>
-            - Flippers
-            <br>
-            - Kickboard
-            <br>
-            - Pull buoy
-            <br>
-            - Finger paddles
-            <br>
-            - Tri-paddles
-            <br>
-            - Snorkel
-            <br>
-            - Parachute
-          </p>
-        </div>
-        <div class="card-image-container">
-          <img src="images/lanes.jpg" alt="Coaching" class="card-image" />
+          <img src="images/training.jpg" alt="Lanes" class="card-image" />
         </div>
       </section>
 
       <!--Social-->
       <section id="social" class="card card-hover-a group">
-        <div class="card-image-container">
-          <img src="images/butterfly.jpg" alt="Lanes" class="card-image" />
-        </div>
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
-            <h2 class="card-title-b">SOCIAL</h2>
+            <h2 class="card-title-a">SOCIAL</h2>
           </div>
           <p class="card-body">
             Every Saturday morning after training (around 9am), we meet for breakfast at Welsford Street Café, 2/159
@@ -226,93 +196,170 @@
             Each month at Welsford Café, we draw a name from a hat to win a voucher from the café.
           </p>
         </div>
+        <div class="card-image-container">
+          <img src="images/social.jpg" alt="Lanes" class="card-image" />
+        </div>
+      </section>
+
+      <!--Equipment-->
+      <section id="equipment" class="card card-hover-b group">
+        <div class="card-panel">
+          <div class="flex-1 relative">
+            <div class="card-title-box translate-x-full "></div>
+            <h2 class="card-title-b">EQUIPMENT</h2>
+          </div>
+          <p class="card-body">
+            We use the following equipment in most training sessions. Please bring what you can. You can purchase these
+            items from <a href="www.aquashop.com.au" class="text-blue-500 hover:underline">www.aquashop.com.au</a>, with
+            delivery typically taking 2–3 days. If you're unsure what to buy, please contact Nicole.
+          <div class="flex justify-center w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 items-center pb-8">
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Drink bottle</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Flippers</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Kickboard</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Pull buoy</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Finger paddles</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Tri-paddles</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Snorkel</span>
+              </label>
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" class="form-checkbox h-5 w-5 accent-mid"
+                  onclick="this.nextElementSibling.classList.toggle('line-through', this.checked)" />
+                <span>Parachute</span>
+              </label>
+            </div>
+          </div>
+          </p>
+        </div>
+        <div class="card-image-container">
+          <img src="images/equipment.jpg" alt="Coaching" class="card-image" />
+        </div>
+      </section>
+
+      <!--Lane Structure-->
+      <section id="lanes" class="card card-hover-a group">
+        <div class="card-panel">
+          <div class="flex-1 relative">
+            <div class="card-title-box translate-x-full "></div>
+            <h2 class="card-title-a">LANE STRUCTURE</h2>
+          </div>
+          <p class="card-body">
+            We use three lanes for indoor sessions and four lanes when swimming outdoors.
+            <br><br>
+            Lane 1 is for beginners or those returning after a break, as well as swimmers who prefer a slower pace.
+            <br><br>
+            Lane 2 is for average to above-average swimmers who have been with the club for a while or have the
+            fitness to complete the full program.
+            <br><br>
+            Lanes 3 and 4 are for above-average swimmers with a high level of fitness.
+          </p>
+        </div>
+        <div class="card-image-container">
+          <img src="images/lanes.jpg" alt="Coaching" class="card-image" />
+        </div>
       </section>
 
     </div>
 
-    <!--Schedule-->
-    <section id="schedule"
-      class="flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-4 space-y-4 md:space-y-8 md:pb-16">
-      <h2 class="card-title-a text-center p-0 border-0">SCHEDULE</h2>
-      <div class="relative w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
-        <iframe
-          class="absolute top-0 left-0 w-full h-full p-4"
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&mode=WEEK&showCalendars=0&showPrint=0&showTitle=0&src=NDc5MzNiNzFmMWFjMzk1OTc3YTljOGM3MDE3ODlkYTkwMWNhYjM4MzFkMGRmYjA5ZDlhNmNhNDAzOWE2Nzc3M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%238e24aa"
-          style="border-width:0" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </section>
-
     <!--Contact-->
-    <section id="contact" class="text-black p-8 flex flex-col items-center space-y-4 w-full">
-      <h2 class="card-title-a text-center p-0 border-0">CONTACT US</h2>
-      <div
-        class="flex-1 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 justify-around items-center w-full max-w-2xl">
-        <div class="icon-container">
-          <div class="icon-bg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
+    <section id="contact" class="bg-white w-full flex justify-center shadow-lg">
+      <div class="text-black p-8 flex flex-col items-start md:items-center space-y-4 w-full max-w-4xl">
+        <h2 class="w-full p-4 text-2xl font-bold border-b-2 border-mid text-mid text-left md:text-center">CONTACT US
+        </h2>
+        <div
+          class="flex-1 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 items-start md:items-center w-full pb-4 border-b-2 border-mid">
+          <div class="icon-container">
+            <div class="icon-bg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <p>+61 438 830 613</p>
           </div>
-          <p class="text-nowrap">+61 (0) 123 456 789</p>
-        </div>
-        <div class="icon-container">
-          <div class="icon-bg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-              </path>
-            </svg>
+          <div class="icon-container">
+            <div class="icon-bg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <p>hello.gvcrocs@gmail.com</p>
           </div>
-          <p class="text-nowrap">info@gvcrocs.com.au</p>
-        </div>
-        <div class="icon-container">
-          <div class="icon-bg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
+          <div class="icon-container">
+            <div class="icon-bg">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <p>Aquamoves, Shepparton, Vic</p>
           </div>
-          <p class="text-nowrap">Goulburn Valley, VIC</p>
         </div>
+        <form class="flex-1 w-full text-left space-y-4" action="https://formspree.io/f/xjkrzegv" method="POST">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <input type="text" id="name" name="name" required class="input-field" placeholder="Your full name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" name="_replyto" required class="input-field"
+                placeholder="your.email@example.com" />
+            </div>
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+            <input type="text" id="subject" name="_subject" required class="input-field"
+              placeholder="What is this regarding?" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required class="input-field resize-vertical"
+              placeholder="Tell us more about your inquiry..."></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="button">
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
-      <form class="flex-1 w-full text-left space-y-4 max-w-2xl">
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-            <input type="text" id="name" name="name" required class="input-field" placeholder="Your full name" />
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-            <input type="email" id="email" name="email" required class="input-field"
-              placeholder="your.email@example.com" />
-          </div>
-        </div>
-        <div>
-          <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-          <input type="text" id="subject" name="subject" required class="input-field"
-            placeholder="What is this regarding?" />
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-          <textarea id="message" name="message" rows="5" required class="input-field resize-vertical"
-            placeholder="Tell us more about your inquiry..."></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="button">
-            Send Message
-          </button>
-        </div>
-      </form>
     </section>
   </div>
-  <footer class="lg:pt-20">
-    <div class="flex flex-col md:flex-row items-center justify-between md:space-x-8 p-8 text-white">
-      <p><a href="https://github.com/SamTheSomebody">Designed with ♥ by Sam Muller</a></p>
-      <p>Copyright © 2025 GV Crocs</p>
-    </div>
+  <footer class="flex flex-col md:flex-row items-center justify-between md:space-x-8 p-8 text-white">
+    <p><a href="https://github.com/SamTheSomebody">Designed with ♥ by Sam Muller</a></p>
+    <p>Copyright © 2025 GV Crocs</p>
   </footer>
   <script src="script.js"></script>
 </body>
