@@ -11,6 +11,7 @@
     @apply bg-mid text-white px-8 py-3 rounded-md border-mid font-semibold hover:bg-white hover:text-mid hover:border-2 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg;
   }
 }
+
 @layer components {
   .nav-link {
     @apply transition-all h-full hover:text-light pt-3 p-2 bg-black/20 md:p-4 border-b-2 border-transparent hover:border-light;
@@ -36,11 +37,7 @@
     @apply flex-1 flex flex-col overflow-hidden z-20 bg-white shadow-lg;
   }
 
-  .card-title-a {
-    @apply p-4 lg:p-8 text-2xl font-bold border-b-2 border-mid text-mid text-center lg:text-right group-hover:text-white transition-all z-20 duration-300;
-  }
-
-  .card-title-b {
+  .card-title {
     @apply p-4 lg:p-8 text-2xl font-bold border-b-2 border-mid text-mid text-center lg:text-left group-hover:text-white transition-all z-20 duration-300;
   }
 
@@ -70,5 +67,9 @@
 
   .checkbox-container {
     @apply flex items-center space-x-2;
+  }
+
+  .hyperlink {
+    @apply text-blue-500 cursor-pointer hover:underline
   }
 }

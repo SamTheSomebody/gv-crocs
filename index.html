@@ -7,7 +7,7 @@
   <meta name="description"
     content="GV Crocs is a swimming club in the Goulburn Valley region. We are affiliated with Masters Swimming Victoria and Masters Swimming Australia. We are dedicated to creating a fun and safe environment where adult swimmers in our community can regularly train for fitness, wellbeing, and competition.">
   <title>GV Crocs</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/svg" href="images/logo.svg">
   <link href="./dist/output.css" rel="stylesheet">
   <style>
     html {
@@ -52,11 +52,11 @@
   <nav class="sticky bg-mid shadow-lg top-0 z-40 flex justify-center">
     <div class="flex-1 flex justify-between items-center max-w-7xl">
       <a href="#top" class="flex-1 h-10 w-16 md:h-12 md:w-20">
-        <img src="images/logo.png" alt="GV Crocs Logo" class="h-10 w-16 p-2 md:h-12 md:w-20">
+        <img src="../images/logo.svg" alt="GV Crocs Logo" class="h-10 w-16 p-2 md:h-12 md:w-20">
       </a>
       <div class="flex text-white font-bold h-full text-xs md:text-sm">
-        <a href="#schedule" class="nav-link pl-4">Schedule</a>
         <a href="#about" class="nav-link">About</a>
+        <a href="#schedule" class="nav-link pl-4">Schedule</a>
         <a href="#contact" class="nav-link pr-4">Contact</a>
       </div>
     </div>
@@ -66,16 +66,14 @@
   <div class="flex flex-col items-center w-full mb-15">
 
     <!--Header-->
-    <section id="header" class="relative bg-white w-full flex h-[24vw] max-h-[350px] justify-center items-center">
-      <div
-        class="absolute inset-0 w-full h-full z-0 bg-[url('../images/pool_crop.png')] bg-repeat bg-center blur-xl overflow-hidden">
+    <section id="header" class="relative w-full flex h-[24vw] max-h-[350px] justify-center items-center">
+      <div class="absolute inset-0 w-full h-full z-0 bg-[url('../images/pool_crop.png')] bg-repeat bg-center blur-xl">
       </div>
-      <img src="images/pool_crop.png" alt="Pool"
-        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain overflow-visible">
+      <img src="images/pool_crop.png" alt="Pool" class="absolute inset-0 w-full h-auto max-h-[380px] object-contain">
       <img src=" images/pool_crop_foreground.png" alt="Overlay"
-        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain overflow-visible blur-sm brightness-25 z-10">
+        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain blur-sm brightness-25 z-10">
       <img src="images/pool_crop_foreground.png" alt="Overlay"
-        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain overflow-visible z-20">
+        class="absolute inset-0 w-full h-auto max-h-[380px] object-contain z-20">
       <div class="absolute inset-0 w-full h-auto font-bold leading-none text-white text-center text-nowrap justify-center
         -space-y-[2vw] p-[2vw] pb-[8vw] 2xl:-space-y-8 2xl:p-4 2xl:pb-24 flex flex-col">
         <h1 class="flex-1 text-[3vw] 2xl:text-[46px] header2" style="text-shadow: 0px 5px 5px #00000088;">
@@ -86,27 +84,22 @@
       </div>
     </section>
 
-    <!--Schedule-->
-    <section id="schedule"
-      class="pt-[4vw] 2xl:pt-16 flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full bg-white shadow-lg p-4 space-y-4 md:space-y-8 md:pb-16">
-      <div class="relative max-w-7xl w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
-        <iframe title="GV Crocs Calendar" class="absolute top-0 left-0 w-full h-full p-4"
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&showPrint=0&mode=AGENDA&title=GV%20Crocs&showTitle=0&src=aGVsbG8uZ3Zjcm9jc0BnbWFpbC5jb20&src=OGc4MHBtdjRnOW5xNDNtYnNkbmJlZ2JkNWFlbWliNGhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=c3ZwZHRwM2RlYThhNGFmY21xYjZodjMycXVtOG0yNDhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MGFydjlzdGI0bnZyOTZ0bjhxdGw1aGxtbnVuZXFsbXFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=aXBxZnJhOGVwZTNmdGtzaTlqOWdpaHB1ajJhNWZ1bmtAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%23f4511e&color=%23d81b60&color=%23d50000&color=%238e24aa"
-          style="border-width:0" frameborder="0" scrolling="no"></iframe>
-    </section>
-
-    <div id="about" class="flex-1 flex flex-col py-4 md:py-10 space-y-4 md:space-y-10 items-center w-full">
+    <div id="about" class="flex-1 flex flex-col mt-4 py-4 md:py-10 space-y-4 md:space-y-10 items-center w-full">
       <!--Mission-->
       <section id="mission" class="card card-hover-a group">
         <div class="flex-1 flex flex-col">
           <div class="flex-1 relative">
             <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title-a">OUR MISSION</h2>
+            <h2 class="card-title">ABOUT US</h2>
           </div>
           <p class="card-body">
+            <span class="font-bold">Our Vision:</span><br>
+            Our vision is to lead the way in promoting, developing, and growing fitness and overall health through
+            swimming in the Goulburn Valley region.
+            <br><br>
+            <span class="font-bold">Our Mission:</span><br>
             GV Crocs is dedicated to creating a fun and safe environment where adult swimmers in our community can
-            regularly train for fitness, wellbeing, and competition. Our vision is to lead the way in promoting,
-            developing, and growing fitness and overall health through swimming in the Goulburn Valley region.
+            regularly train for fitness, wellbeing, and competition.
             <br><br>
             Goulburn Valley Masters Swimming Club Inc. (“GV Crocs”) is affiliated with Masters Swimming Victoria (MSV)
             and, by extension, Masters Swimming Australia. To participate in our club, you must maintain a full GV
@@ -123,14 +116,16 @@
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
-            <h2 class="card-title-b">MEMBERSHIP</h2>
+            <h2 class="card-title">MEMBERSHIP</h2>
           </div>
           <p class="card-body">
             You're welcome to try a few sessions with the squad before joining Masters Swimming Victoria. After these
-            initial sessions, MSV membership is required to continue training with the Crocs. Most members choose the
-            12-Month Regional Discount Membership, which costs $100 per year. This membership includes event insurance
-            and allows you to compete in competitions throughout Victoria and Australia. You'll also receive a monthly
-            newsletter to keep you updated with MSV news and information.
+            initial sessions, MSV membership is required to continue training with the Crocs.
+            <br><br>
+            Most members choose the 12-Month Regional Discount Membership, which costs $100 per year. This membership
+            includes event insurance and allows you to compete in competitions throughout Victoria and Australia. You'll
+            also receive a monthly newsletter to keep you updated with MSV news and information. <span
+              href="https://www.mastersswimming.org.au/memberships/" class="hyperlink">You can join MSV here<span>.
           </p>
         </div>
         <div class="card-image-container">
@@ -143,7 +138,7 @@
         <div class="card-panel">
           <div class="flex-1 relative">
             <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title-a">COACHING</h2>
+            <h2 class="card-title">COACHING</h2>
           </div>
           <p class="card-body">
             Our Head Coach, Nicole Dainton (Advanced Coach), brings a wealth of experience in both pool and open-water
@@ -161,15 +156,58 @@
         </div>
       </section>
 
+      <!--Social-->
+      <section id="social" class="card card-hover-b group">
+        <div class="flex-1 flex flex-col overflow-hidden">
+          <div class="flex-1 relative">
+            <div class="card-title-box -translate-x-full"></div>
+            <h2 class="card-title">SOCIAL</h2>
+          </div>
+          <p class="card-body">
+            Every Saturday morning after training (around 9am), we meet for breakfast at <span
+              href="https://maps.app.goo.gl/nXBn5oeRpDcN87vR7" class="hyperlink">Welsford Street Café</span>. Come along
+            for a chat and a delicious breakfast—everyone is welcome! This is a
+            great opportunity for new members to get to know others and enjoy the social side of the club. Each month,
+            we draw a name from a hat to win a voucher from the café.
+            <br><br>
+            We also hold a Christmas Party each year to celebrate our swimming achievements together (venue and time to
+            be confirmed).
+          </p>
+        </div>
+        <div class="card-image-container">
+          <img src="images/social.jpg" alt="Lanes" class="card-image" />
+        </div>
+      </section>
+
+      <!--Stay Connected-->
+      <section id="connected" class="card card-hover-a group">
+        <div class="flex-1 flex flex-col overflow-hidden">
+          <div class="flex-1 relative">
+            <div class="card-title-box translate-x-full"></div>
+            <h2 class="card-title">STAY CONNECTED</h2>
+          </div>
+          <p class="card-body">
+            We keep in touch with members through our private Facebook group, <span
+              href="https://www.facebook.com/groups/1651695968441593/" class="hyperlink">Goulburn Valley Crocs</span>.
+            Please send a join request to stay informed about events, training updates, competitions, and other
+            important information.
+            <br><br>
+            From time to time, the committee will also email all financial members to ensure you’re up to date.
+          </p>
+        </div>
+        <div class="card-image-container">
+          <img src="images/close_up.jpg" alt="Lanes" class="card-image" />
+        </div>
+      </section>
       <!--Training Costs-->
       <section id="training" class="card card-hover-b group">
         <div class="flex-1 flex flex-col overflow-hidden">
           <div class="flex-1 relative">
             <div class="card-title-box -translate-x-full"></div>
-            <h2 class="card-title-b">TRAINING SESSION COST</h2>
+            <h2 class="card-title">TRAINING SESSION COST</h2>
           </div>
           <p class="card-body">
-            Each training session costs $7, which covers coaching, administration, and a small contribution to club
+            Each training session costs $8, which covers coaching, administration, and a small contribution to club
             activities that benefit everyone. You can pay poolside using a touch-pay Square pad for credit/debit cards
             or via your phone.
             <br><br>
@@ -184,40 +222,17 @@
         </div>
       </section>
 
-      <!--Social-->
-      <section id="social" class="card card-hover-a group">
-        <div class="flex-1 flex flex-col overflow-hidden">
-          <div class="flex-1 relative">
-            <div class="card-title-box translate-x-full"></div>
-            <h2 class="card-title-a">SOCIAL</h2>
-          </div>
-          <p class="card-body">
-            Every Saturday morning after training (around 9am), we meet for breakfast at Welsford Street Café, 2/159
-            Welsford Street, Shepparton. Come along for a chat and a delicious breakfast—everyone is welcome!
-            <br><br>
-            This is a great opportunity for new members to get to know others and enjoy the social side of the club.
-            <br><br>
-            We also hold a Christmas Party each year to celebrate our swimming achievements together (venue and time to
-            be confirmed).
-            <br><br>
-            Each month at Welsford Café, we draw a name from a hat to win a voucher from the café.
-          </p>
-        </div>
-        <div class="card-image-container">
-          <img src="images/social.jpg" alt="Lanes" class="card-image" />
-        </div>
-      </section>
 
       <!--Equipment-->
-      <section id="equipment" class="card card-hover-b group">
+      <section id="equipment" class="card card-hover-a group">
         <div class="card-panel">
           <div class="flex-1 relative">
-            <div class="card-title-box -translate-x-full "></div>
-            <h2 class="card-title-b">EQUIPMENT</h2>
+            <div class="card-title-box translate-x-full "></div>
+            <h2 class="card-title">EQUIPMENT</h2>
           </div>
           <p class="card-body">
             We use the following equipment in most training sessions. Please bring what you can. You can purchase these
-            items from <a href="www.aquashop.com.au" class="text-blue-500 hover:underline">www.aquashop.com.au</a>, with
+            items from <a href="www.aquashop.com.au" class="hyperlink">www.aquashop.com.au</a>, with
             delivery typically taking 2–3 days. If you're unsure what to buy, please contact Nicole.
           <div class="flex justify-center w-full">
             <div class="grid grid-cols-2 gap-x-4 gap-y-2 items-center pb-8">
@@ -271,11 +286,11 @@
       </section>
 
       <!--Lane Structure-->
-      <section id="lanes" class="card card-hover-a group">
+      <section id="lanes" class="card card-hover-b group">
         <div class="card-panel">
           <div class="flex-1 relative">
-            <div class="card-title-box translate-x-full "></div>
-            <h2 class="card-title-a">LANE STRUCTURE</h2>
+            <div class="card-title-box -translate-x-full "></div>
+            <h2 class="card-title">LANE STRUCTURE</h2>
           </div>
           <p class="card-body">
             We use three lanes for indoor sessions and four lanes when swimming outdoors.
@@ -286,6 +301,9 @@
             fitness to complete the full program.
             <br><br>
             Lanes 3 and 4 are for above-average swimmers with a high level of fitness.
+            <br><br>
+            <span href="https://oceanfit.com.au/training/pool-lane-swimming-etiquette/" class="hyperlink">You can read
+              about lane etiquette here</span>.
           </p>
         </div>
         <div class="card-image-container">
@@ -294,6 +312,16 @@
       </section>
 
     </div>
+
+    <!--Schedule-->
+    <section id="schedule"
+      class="flex flex-col h-[475px] md:h-[650px] lg:h-[825px] items-center w-full shadow-lg p-8 md:space-y-8 md:pb-16">
+      <div class="relative max-w-7xl w-full h-full bg-[#f0f3f8] rounded-lg shadow-lg origin-top">
+        <h2 class="card-title border-b-0 w-full text-left">SCHEDULE</h2>
+        <iframe title="GV Crocs Calendar" class="absolute top-[50px] left-0 w-full h-full p-4 pb-[60px]"
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Australia%2FMelbourne&showPrint=0&mode=AGENDA&title=GV%20Crocs&showTitle=0&src=aGVsbG8uZ3Zjcm9jc0BnbWFpbC5jb20&src=OGc4MHBtdjRnOW5xNDNtYnNkbmJlZ2JkNWFlbWliNGhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=c3ZwZHRwM2RlYThhNGFmY21xYjZodjMycXVtOG0yNDhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MGFydjlzdGI0bnZyOTZ0bjhxdGw1aGxtbnVuZXFsbXFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=aXBxZnJhOGVwZTNmdGtzaTlqOWdpaHB1ajJhNWZ1bmtAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%23f4511e&color=%23d81b60&color=%23d50000&color=%238e24aa"
+          style="border-width:0" frameborder="0" scrolling="no"></iframe>
+    </section>
 
     <!--Contact-->
     <section id="contact" class="bg-white w-full flex justify-center shadow-lg">
