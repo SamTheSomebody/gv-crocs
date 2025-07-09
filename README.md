@@ -11,7 +11,7 @@ The Goulburn Valley Crocs Swim Club needed a simple website to provide essential
 ## How
 
 The site was designed with a minimal tech stack: HTML, Tailwind CSS and a single JavaScript function for smooth scrolling.
-To mitiage hosting costs entirely, a backend was omitted. Instead, Formspree was used for the contact from and an embedded Google Calendar for the schedule.
+To mitigate hosting costs entirely, a backend was omitted. Instead, Formspree was used for the contact form and an embedded Google Calendar for the schedule.
 
 The site is hosted on **GitHub Pages** for free. The only ongoing cost is the domain name.
 
